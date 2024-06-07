@@ -1,0 +1,699 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>IT INTERNAL - @shv</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="4eb08122-551c-4fd7-ba7b-b7fc9ec3cfa7" class="page sans"><header><h1 class="page-title">IT INTERNAL - @shv</h1><p class="page-description"></p></header><div class="page-body"><p id="2f79acb5-818f-490d-a511-58b03a5e7335" class="">
+</p><h2 id="1ccfb5ef-638c-4184-b0e8-837610559d64" class="">SOFTWARE LAB QUESTIONS:</h2><p id="6abd38b1-1b97-46a4-8ef0-e3954deac3b1" class="">
+</p><ol type="1" id="5c8f1d1c-ad91-4f88-aa7f-f15ea4f8036c" class="numbered-list" start="1"><li>Calculate student marks for sum, average ,rank, grade, percentage, min, max, count, if(condition) in EXCEL? (WRITE DOWN PROCEDURE ALSO)- AVAILABLE IN YOUTUBE</li></ol><ol type="1" id="c1285536-832b-467f-8351-428b21237d24" class="numbered-list" start="2"><li>“MAIL MERGE” options on your document and  write the procedure for each option? - SCROLL DOWN</li></ol><ol type="1" id="32cb69a6-a385-490c-a300-14c8d3db54d0" class="numbered-list" start="3"><li>Design “VISITING CARD” and write the procedure? - SCROLL DOWN</li></ol><ol type="1" id="a70fcee7-9ca9-4065-8834-78986fe944dc" class="numbered-list" start="4"><li>Create your time-table by using different formatting styles and write the procedure in MS WORD? - SCROLL DOWN</li></ol><ol type="1" id="b4cdbd86-c686-4cb8-88e1-55503c91c487" class="numbered-list" start="5"><li>Using MS WORD to create “Record Certificate” and write the procedure also?</li></ol><ol type="1" id="5d9f2990-481b-43e7-a918-0cc2aaf7762a" class="numbered-list" start="6"><li>Create your STUDENT ID CARD by using different formatting styles and write the procedure. - SCROLL DOWN</li></ol><ol type="1" id="79326627-9a6a-4db9-860b-443b2aac73b6" class="numbered-list" start="7"><li>To prepare a ppt (PowerPoint) in 5 slides on motherboard components and write down the steps to perform the following  and apply all the slides</li></ol><ol type="1" id="332f16fa-9f9e-4b5d-b51b-8f7853526be3" class="numbered-list" start="8"><li>Design one document using the below option? (write shortcut keys also)<p id="1df5949b-3fc0-4985-a641-aef030c3ef6c" class="">a) picture b) hyperlink c) page color d) page border e)drop cap</p></li></ol><p id="6bf2fbf5-309a-471c-9516-d5a246f98122" class="">
+</p><h2 id="45414078-02b2-471d-a348-53dabf5dc7e0" class="">HARDWARE LAB QUESTIONS:</h2><ol type="1" id="b29442e0-c96e-44e2-a1f6-0de1eaadf4d7" class="numbered-list" start="1"><li> Discuss<p id="d5cb0213-3a24-4298-b406-d6927b16b41d" class=""> i. HOD</p><p id="2c9cd172-8b7e-4566-b667-61cbfffaa032" class="">ii. CMOS</p><p id="311fcf8d-5d37-483f-b80b-f9a885f694d9" class="">iii. NORTH BRIDGE</p><p id="acc9221d-1e77-4e89-9bb6-2b6335f71970" class="">iv. SMPS</p><p id="4b405c52-fb95-49eb-920f-098822f18e2c" class="">v. PGI SLOTS</p><p id="d49535e7-a320-46b2-a0f4-2d3cc0d8e7fe" class="">vi. BACK END PORTS</p><p id="5e9827b6-2d04-4d7f-8920-1f09d5f732d5" class="">vii. ATX-POWER CONNECTOR</p><p id="e46c9348-3ac5-4831-a1be-633b01fd17e3" class="">viii. AGP SLOT</p><p id="78b16383-2c5c-48ca-885c-503248f62039" class="">ix. LAN</p><p id="c33d75fd-f665-46ac-9803-3f5035b8b487" class="">x. ROM</p></li></ol><ul id="bebd47d8-5c95-4f2f-9db6-b41cb3ffeee0" class="toggle"><li><details open=""><summary><strong>Solutions: </strong></summary><p id="b2249673-2fff-49ce-a3ae-8965c1b1cfbb" class="">i. <strong>HOD</strong>: Head of Department; a senior faculty member responsible for overseeing a specific academic department in an educational institution.</p><p id="ca3c4495-7aca-42ff-a5b1-2de9153c813e" class="">ii. <strong>CMOS</strong>: Complementary Metal-Oxide-Semiconductor; a technology for constructing integrated circuits, used in microprocessors, batteries, and other digital logic circuits.</p><p id="1b91f62f-eb7b-4ad9-8f16-0479a88795e8" class="">iii. <strong>North Bridge</strong>: A chipset component in a computer that handles communication between the CPU, RAM, and graphics card.</p><p id="beb9c5c0-92a7-4e53-ace9-8a351299f4c3" class="">iv. <strong>SMPS</strong>: Switched-Mode Power Supply; a power supply unit that efficiently converts electrical power for electronic devices, providing the necessary voltages.</p><p id="f73857c3-380c-4b3f-bae9-a8458250140b" class="">v. <strong>PCI Slots</strong>: Peripheral Component Interconnect slots; expansion slots on a motherboard for adding hardware devices like network cards, sound cards, and other peripherals.</p><p id="2c26c007-c8a9-4dae-8316-927d90dc7a85" class="">vi. <strong>Back End Ports</strong>: Ports located at the back of a computer for connecting external devices, such as USB, HDMI, and Ethernet ports.</p><p id="78efe804-3e11-4e79-872d-fdb6cdad2aba" class="">vii. <strong>ATX Power Connector</strong>: A connector on a motherboard that supplies power from the power supply unit, typically with 20 or 24 pins.</p><p id="35fdcd33-b6b3-4de7-b6de-a32d119b598b" class="">viii. <strong>AGP Slot</strong>: Accelerated Graphics Port; an older type of expansion slot on a motherboard designed specifically for graphics cards.</p><p id="76e9c736-9844-446e-a72c-253af6b5d638" class="">ix. <strong>LAN</strong>: Local Area Network; a network that connects computers within a limited area like a home, school, or office.</p><p id="7abce4d2-b2f6-4493-a992-ab48ecef9302" class="">x. <strong>ROM</strong>: Read-Only Memory; non-volatile memory used in computers and other electronic devices to store firmware or software that is not intended to be modified frequently.</p><p id="df9038f8-e1fc-4197-bf68-d9970a6050e7" class="">
+</p></details></li></ul><ul id="6ebe96ba-d5cf-4029-8afa-8d7a459be814" class="toggle"><li><details open=""><summary><strong>Draw the block diagram of computer and explain its peripheral components?</strong></summary><p id="6d90b04e-f958-4f33-b092-e5ebe3549062" class="">A computer is an electronic device which is used to perform operation on raw data as per instruction given by user. They are</p><p id="b4fca64b-9ca8-4a1e-b061-c1d1fed6bc05" class="">1) It accepts data or instructions through input,</p><p id="a72b0995-2e3e-4ab2-af1e-25e94a7faa71" class="">2) It stores data,</p><p id="d27058bf-f5d8-45ec-a092-d1c207df4c09" class="">3) It can process required data by the user,</p><p id="aafab479-d647-42e7-85cb-25b4e230d12e" class="">4) It gives results as production, and</p><p id="ada4e33f-fa50-4507-9d27-f90d334f6598" class="">5) It controls all functions inside the computer</p><p id="c577db56-1254-4d3b-836a-32307d8ea371" class=""><strong>BLOCK DIAGRAM OF A COMPUTER: </strong></p><figure id="a22c48fa-5e8b-4996-91da-54dd14aabeb2" class="image"><a href="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/Block-diagram-of-CPU_(1).png"><img style="width:602px" src="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/Block-diagram-of-CPU_(1).png"/></a></figure><p id="053088cb-3afa-410b-92c8-0b0db74a9de7" class=""><strong>1. Input unit</strong> - The input device is used to input data into the computer system. It converts inputted data into binary codes and It sends data to main memory of computer .</p><p id="5d203347-3c70-43a7-95e5-b1c4de95a17d" class=""><strong>2. Central Processing Unit (CUP) –</strong> CPU is called the brain of a computer. An electronic circuitry that carries out the instruction given by a computer program.</p><p id="6ba2f6b7-f219-4b7b-87e5-5e20f3b657b1" class="">CPU can be sub classified into three parts.</p><p id="697ea2d4-a0bb-4583-85ca-491b527099ed" class="">i .Control unit (CU)</p><p id="19ffe390-6339-4e00-9cf5-721e82238075" class="">ii. Arithmetic &amp; Logic unit (ALU)</p><p id="bf7f3235-c130-4805-912e-994300992b0f" class="">iii. Memory Unit (MU)</p><p id="4d03b83c-8145-4c48-a065-7bbaa259d643" class=""><strong>ii. Arithmetic &amp; Logic unit (ALU) –</strong></p><p id="2635bbe4-b329-4356-b992-54addac9fbb3" class="">The arithmetic logic unit (ALU), which performs simple arithmetic operation such as +,-, *, / and logical operation such as &gt;, &lt;, =&lt;, &lt;= etc.</p><p id="3df8f09c-0f3b-49f4-b483-90e77846959a" class="">
+</p><p id="eab46ebf-0b3a-4f62-8301-bbda6941dc16" class=""><strong>iii. Memory Unit (MU)-</strong></p><p id="2fc6fa4d-9816-4bc2-9591-cae7444d018c" class="">Memory is used to store data and instructions before and after processing. Memory is  also called Primary memory or internal memory. It is used to store data temporary or permanently.</p><p id="d69a6d71-6586-4803-852a-bec7123f38ff" class="">
+</p><p id="5af86e61-129a-4357-8d2a-5723c3ffb11d" class=""><strong>Function of CPU-</strong></p><ol type="1" id="9652621c-6dac-41fa-84f0-a13a3cfeed26" class="numbered-list" start="1"><li>It controls all the parts and software and data flow of computer.</li></ol><ol type="1" id="b70a1f22-5747-4936-9724-324e0bce42c3" class="numbered-list" start="2"><li>It accepts data from input device.</li></ol><ol type="1" id="b2550574-d25b-405a-8543-101604dc5ab8" class="numbered-list" start="3"><li>It sends information to output device.</li></ol><ol type="1" id="17129eb8-ea9f-4fab-836a-cf06f2679299" class="numbered-list" start="4"><li>Executing programs stored in memory</li></ol><ol type="1" id="9e6615cc-b195-46b1-aed0-ed545ea23a50" class="numbered-list" start="5"><li>It stores data either temporarily or permanent basis.</li></ol><ol type="1" id="84083644-9007-4557-827d-fa50885e08a4" class="numbered-list" start="6"><li>It performs arithmetical and logical operations.</li></ol><p id="27dbe244-7f52-4b08-97dc-9b0b90e849ec" class="">(Write any four or all six - as your wish)</p><p id="8b7222fa-01fc-4ba9-959a-f5a10159936a" class=""><strong>3. Output Unit –</strong> An output device is used to show the result of processing.it accepts data or information sends from main memory of computer. It converts binary coded information into HLL or inputted languages.</p></details></li></ul><ul id="a1bd1940-161f-4e5f-b96e-fef5039747e9" class="toggle"><li><details open=""><summary><strong>explain motherboard components in detail? (Minimum 15 components explain)</strong></summary><figure id="0379d4a5-6b89-4e46-bbf4-4c5c81d172f6" class="image"><a href="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/Untitled.png"><img style="width:633px" src="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/Untitled.png"/></a></figure><p id="f8d85e85-7509-44ef-a4a2-715c6b7ca25e" class="">(Don’t worry no need of this diagram. just learn the components that’s it)</p><ol type="1" id="ffd62985-8e47-41eb-aa6c-87825079aa5e" class="numbered-list" start="1"><li><strong>Mouse &amp; keyboard</strong><p id="6f7eb5eb-9c50-4d6e-8c2e-2532a03297c8" class="">Keyboard Connectors are two types basically. All PCs have a Key board port connected directly to the motherboard. The oldest, but still quite common type, is a special DIN, and most PCs until recently retained this style connector. The AT-style keyboard connector is quickly disappearing, being replaced by the smaller mini DIN PS/2-style keyboard connector.</p></li></ol><ol type="1" id="fc97b62d-6cf9-4ca4-8265-9be8af5aed4a" class="numbered-list" start="2"><li><strong>USB:</strong><p id="5c6d9f18-bcd5-4fe5-9959-bb63debb85ac" class="">USB is the General-purpose connection for PC. You can find USB versions of many different devices, such as mice, keyboards, scanners, cameras, and even printers. USB devices are hot swappable. You can insert or remove them without restarting your system. </p></li></ol><ol type="1" id="5136557e-feaf-4ff1-b1ce-3614dd92ad7c" class="numbered-list" start="3"><li><strong>Parallel port:</strong><p id="0fe719f5-faac-45c3-a4ef-716c3b246a83" class="">Most printers use a special connector called a parallel port. Parallel port carry data on more than one wire, as opposed to the serial port, which uses only one wire. Parallel ports use a 25-pin female DB connector. Parallel ports are directly supported by the motherboard through a direct connection or through a dangle.</p></li></ol><ol type="1" id="43b503b4-c158-4d20-937a-894948471ed0" class="numbered-list" start="4"><li><strong>CPU Chip</strong><p id="23a65af3-478e-456c-93db-f29c1aff9cf4" class="">The <em>central processing unit, </em>also called the <em>microprocessor </em>performs all the calculations that take place inside a pc. CPUs come in Variety of shapes and sizes. Modern CPUs generate a lot of heat and thus require a cooling fan or heat sink.</p></li></ol><ol type="1" id="d45d208c-528b-47e8-a577-75f4aea0ffaa" class="numbered-list" start="5"><li><strong>RAM slots</strong><p id="f1f56d92-d053-41ca-bc22-bff52682f851" class="">Random-Access Memory (RAM) stores programs and data currently being used by the CPU. RAM is measured in units called bytes. RAM has been packaged in many different ways. The most current package is called a 168-pin DIMM (Dual Inline Memory module).</p></li></ol><ol type="1" id="5008bedf-cf61-47e1-9cf3-58d14cec10b5" class="numbered-list" start="6"><li><strong>Floppy controller</strong><p id="b1f36285-f354-42d4-bdbd-e88d5f508ba1" class="">The floppy drive connects to the computer via a 34-pin <em>ribbon cable, </em>which in turn connects to the motherboard. A <em>floppy controller</em> is one that is used to control the floppy drive.</p></li></ol><ol type="1" id="60a5ce17-4a9e-44ca-ab78-1e70b9016047" class="numbered-list" start="7"><li><strong>IDE controller</strong><p id="663cd12d-c75d-4199-ba95-a84cb60f466e" class="">Industry standards define two common types of hard drives: EIDE and SCSI.  Majority of the PCs use EIDE drives. SCSI drives show up in high end PCs such as network servers or graphical workstations</p></li></ol><ol type="1" id="0b07ad1c-5cd7-48f9-8d8e-f120f2bc1d0e" class="numbered-list" start="8"><li><strong>PCI slot</strong><p id="24f4631c-d89d-4415-8ab0-95ce2c02da3e" class="">Intel introduced the <em>Peripheral component interconnect</em> bus protocol.  The PCI bus is used to connect I/O devices (such as NIC or RAID controllers) to the main logic of the computer.</p></li></ol><ol type="1" id="3985e449-ff67-4f30-8400-57474e7151cf" class="numbered-list" start="9"><li><strong>ISA slot</strong><p id="80f04d5e-d556-4fd7-8e5b-c79a53c11498" class="">(Industry Standard Architecture) It is the standard architecture of the Expansion bus. Motherboard may contain some slots to connect ISA compatible cards.</p></li></ol><ol type="1" id="67ba58a2-1cb8-4f62-a726-a143e1c110ff" class="numbered-list" start="10"><li><strong>CMOS Battery</strong><p id="4e2c93da-75e9-4cbb-b6a3-d1644a165ca7" class="">To provide CMOS with the power when the computer is turned off all motherboards comes with a battery. These batteries mount on the motherboard in one of three ways: the obsolete external battery, the most common onboard battery, and built-in battery.</p></li></ol><ol type="1" id="fc2a6730-bee1-49b6-b3c3-ed9fa3fa877e" class="numbered-list" start="11"><li><strong>AGP slot</strong><p id="33d02b6b-7887-4a28-a980-baec1508de14" class="">If you have a modern motherboard, you will almost certainly notice a single connector that looks like a PCI slot, but is slightly shorter and usually brown. You also probably have a video card inserted into this slot. This is an <em><span style="border-bottom:0.05em solid">Advanced Graphics Port (AGP)</span></em> slot.</p></li></ol><ol type="1" id="62061b04-a1f3-4170-bbbf-a386d3a21635" class="numbered-list" start="12"><li><strong>CPU slot</strong><p id="9578a664-1b57-4760-aefb-c7fdf426f04b" class="">To install the CPU, just slide it straight down into the slot. Special notches in the slot make it impossible to install them incorrectly. So remember if it does not go easily, it is probably not correct. Be sure to plug in the CPU fan&#x27;s power.</p></li></ol><ol type="1" id="f790f9e7-e38c-4311-af4f-c576c6f3be10" class="numbered-list" start="13"><li><strong>Power supply plug in</strong><p id="ceefe069-8afa-442f-beae-25f1f3a833ee" class="">The Power supply, as its name implies, provides the necessary electrical power to make the pc operate. the power supply takes standard 110-V AC power and converts into  12-Volt, 5-Volt, and 3.3-Volt DC power.</p></li></ol><p id="09a5ad56-0925-4156-84a5-c331e1da50ab" class="">
+</p></details></li></ul><ul id="07374755-c62f-4e34-a69e-d075ffd4b085" class="toggle"><li><details open=""><summary><strong>Discuss steps included in Assembling of a computer?</strong></summary><p id="7978e6a1-53d5-4ee4-ae44-ec2cd9b98c4f" class="">These instructions have the purpose of generally explaining how to assemble a computer as the<br/>process may differ depending on the components that are being used.<br/></p><p id="4d19e0d8-379e-4c04-89a5-d7a9d4139d0c" class=""><strong>COMPONENTS REQUIRED</strong></p><ul id="908bdca9-5eb6-4aa5-84f9-4f77bc30e598" class="bulleted-list"><li style="list-style-type:disc">CPU/microprocessor</li></ul><ul id="da2cb028-037a-4b81-8063-fa0c78c54e03" class="bulleted-list"><li style="list-style-type:disc">motherboard</li></ul><ul id="b4e09de4-46eb-4895-a434-0187d4d1f661" class="bulleted-list"><li style="list-style-type:disc">cabinet</li></ul><ul id="26b6418a-33f9-4327-87cb-1aa65151247f" class="bulleted-list"><li style="list-style-type:disc">input shield</li></ul><ul id="3972b302-69ef-40e0-ad54-c4d9ae3056cf" class="bulleted-list"><li style="list-style-type:disc">hard disk drive</li></ul><ul id="0f86f775-6173-4eac-92b2-063409bda9b6" class="bulleted-list"><li style="list-style-type:disc">floppy disk drive</li></ul><ul id="2363905f-09da-4ef5-bb59-dd5ce8a8510a" class="bulleted-list"><li style="list-style-type:disc">monitor</li></ul><ul id="4770aa92-568d-4aa2-aa22-2fb3c93ba438" class="bulleted-list"><li style="list-style-type:disc">keyboard</li></ul><ul id="29543803-ec52-4497-aa78-38f41d99cd88" class="bulleted-list"><li style="list-style-type:disc">SMPS</li></ul><ul id="098982a7-57a3-4c9a-8d82-44723cdad1de" class="bulleted-list"><li style="list-style-type:disc">printer</li></ul><ul id="a9be83c8-f996-4e99-80c0-2364bc457095" class="bulleted-list"><li style="list-style-type:disc">scraws</li></ul><ul id="778f282e-787e-4dbc-81cd-cf7048a410a5" class="bulleted-list"><li style="list-style-type:disc">power connector/power cables</li></ul><ul id="49b0391b-43bb-4f44-8fbd-dfac3d50b2eb" class="bulleted-list"><li style="list-style-type:disc">VGA cable</li></ul><ul id="0ffd8728-64b1-4fd1-ba7e-18bf383e8ecd" class="bulleted-list"><li style="list-style-type:disc">SATA and DATA cable</li></ul><ul id="1b704a50-3285-471f-94fb-3bd41a14b5be" class="bulleted-list"><li style="list-style-type:disc">Tool kit</li></ul><ul id="6bf6f6f1-f9bc-4eee-a96d-54aff8457033" class="bulleted-list"><li style="list-style-type:disc">Speakers</li></ul><ul id="3d9c5125-e56d-45b4-a49a-32ff0d73ff08" class="bulleted-list"><li style="list-style-type:disc">RAM’S</li></ul><ul id="fe2f8b8a-821c-4d10-870c-f6404e28dbb5" class="bulleted-list"><li style="list-style-type:disc">Mouse</li></ul><ul id="7c3207e4-8c5a-4d5f-80ee-daa53dc03546" class="bulleted-list"><li style="list-style-type:disc">Data Bases</li></ul><ul id="d3aca1ec-5b6d-48bc-85d8-5dce7d57fc2b" class="bulleted-list"><li style="list-style-type:disc">HDMI cables</li></ul><ul id="d6cb554d-6860-490d-a6bc-7f6354539819" class="bulleted-list"><li style="list-style-type:disc">add on cards</li></ul><ul id="56dbfa4c-51e0-499d-a4b0-62138bfe1eb5" class="bulleted-list"><li style="list-style-type:disc">heat skin fan</li></ul><ul id="4f3a240d-3b24-47f5-84f7-34009e1cce78" class="bulleted-list"><li style="list-style-type:disc">CMOS battery</li></ul><ul id="2b4bd392-f457-4952-9fc0-556ca4cdc53c" class="bulleted-list"><li style="list-style-type:disc">external fans</li></ul><p id="b3bd9254-0cf8-45bb-b9bb-469f1f1b508c" class=""><strong>PROCEDURE:</strong></p><p id="765dc39a-76c7-47bd-bb19-066d43b7edcb" class=""><strong>Step1: Create a Space to Work</strong></p><p id="5035302d-573f-48c6-8854-184075fdc4ec" class=""><strong>Step 2: Installing Motherboard/ Central Processing Unit (CPU)</strong></p><p id="c66bbe2f-42b5-409b-bd2f-f94d3371856d" class=""><strong>Step 3: Applying Thermal Paste/ Installing the cooling system<br/>Step 4: Installing the Solid-State Drive (SSD)<br/></strong></p><p id="48d202fa-c1db-4c7d-99d6-482d397526aa" class=""><strong>Step 5: Installing the Random-Access Memory (RAM)</strong></p><p id="f33c6acf-9518-4044-bc7e-8fb5a496086e" class=""><strong>Step 6: Installing input Output shield (I/O shield)<br/>Step 7: Installing the motherboard into the case<br/></strong></p><p id="0b6a1542-23cc-4a5a-be6b-dadc3a18ac3a" class=""><strong>Step 8: Installing additional hard drive (optional)</strong></p><p id="bc7426be-ab84-481d-b072-c14c15af2891" class=""><strong>Step 9: Installing additional cooling systems (optional)</strong></p><p id="58b1441c-4649-4a1d-a1c4-c7930a6e72dc" class=""><strong>Step 10: Installing the power supply unit (PSU)<br/>Step 11: Installing the Graphics Processing Unit (GPU)<br/></strong></p><p id="03076ce6-e762-45da-8583-1ee074b192df" class="">
+</p><p id="e6c06e55-7193-4fd7-a3ab-32b75f196f0d" class=""><strong>Conclusion</strong></p><p id="1f811d62-00e5-454e-98f1-4755e36cb100" class="">The build should now be completed. Plug in a mouse and keyboard and connect the monitor to</p><p id="927aec18-579f-47e0-92b5-c5d94ff60900" class="">the PC, after it is all connected plug in the PSU into an outlet and turn it on. If it does not turn on</p><p id="d3e583c3-a520-4076-917a-76327dfbb6c3" class="">review all steps and make sure all cords are connected to the right place.</p><p id="66f7d09a-4735-4147-b905-4d37b157aa0e" class="">
+</p></details></li></ul><ul id="8715a289-c8d2-4ff8-9c92-3c84854faa49" class="toggle"><li><details open=""><summary><strong>Discuss steps included in dissembling of a computer?</strong></summary><p id="8d4a22da-90f4-4601-a9cc-b6ebf39baea4" class=""><strong>PROCEDURE:</strong></p><p id="685e175e-a0a9-4a70-b9c8-939657e21f09" class=""><strong>1 – Unplug your computer and peripheral items</strong></p><p id="b7ac9c2e-df30-434d-b9f8-3c67aca4f659" class=""><strong>2 – Remove side covers</strong></p><p id="f2ce197b-4281-475f-80fe-1bb3d3db042f" class=""><strong>3 – Disconnect connectors</strong></p><p id="cb0962fa-426f-46b9-8787-66a2ed7f1fbd" class=""><strong>4 – Remove standalone fans</strong></p><p id="46facf91-a853-4688-a5c9-d61a4d614899" class=""><strong>5 – Remove the storage drive</strong></p><p id="b84a9e85-96d2-4805-a326-b00d79a0961b" class=""><strong>6 – Remove memory (RAM) modules</strong></p><p id="a661b1c5-823d-4e3e-9369-03b1a6228a9c" class=""><strong>7 – Remove power supply unit</strong></p><p id="f09fba61-70f7-4f6a-a348-398d0beb6586" class=""><strong>8 – Remove motherboard adapter or expansion cards</strong></p><p id="d0159534-ffcf-40ec-a221-18654a9e3d90" class=""><strong>9 – Remove the motherboard</strong></p></details></li></ul><ol type="1" id="405bac55-0e20-4807-91cb-c4349a348db4" class="numbered-list" start="1"><li>write the procedure for installing windows OS? -<code> refer observation</code></li></ol><ol type="1" id="32d8dbc7-b233-41e0-b7ef-013adec638c7" class="numbered-list" start="2"><li>explain software troubleshooting and it’s steps also?- <code>refer observation</code></li></ol><ol type="1" id="bce9bc0b-f232-41ab-9754-24ae996d700f" class="numbered-list" start="3"><li>Explain hardware troubleshooting and it’s steps also?- <code>refer observation</code></li></ol><p id="d414b1d4-5b4d-482a-a76c-e0f1c9d10d39" class="">
+</p><p id="08263184-1a40-4a81-aec2-45ef1ac2c864" class="">
+</p><h2 id="abcae77e-ce99-45c7-81a3-ed52657e676f" class="">FORMULAS:</h2><figure id="2152ade2-eb52-4dac-96a8-f67c03418660" class="image"><a href="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/WhatsApp_Image_2024-06-07_at_19.47.34_c6543470.jpg"><img style="width:708px" src="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/WhatsApp_Image_2024-06-07_at_19.47.34_c6543470.jpg"/></a></figure><figure id="5819c318-d37a-4b02-894b-597ac15ceab9" class="image"><a href="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/WhatsApp_Image_2024-06-07_at_20.32.45_35c72419.jpg"><img style="width:708px" src="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/WhatsApp_Image_2024-06-07_at_20.32.45_35c72419.jpg"/></a></figure><p id="a2dfcc17-9834-423a-9eae-43e8b6775174" class="">
+</p><figure id="589910cc-0534-4f4a-bee2-4425315a3fd5" class="image"><a href="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/COMPUTER_SHORTCUTS_pages-to-jpg-0001.jpg"><img style="width:708px" src="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/COMPUTER_SHORTCUTS_pages-to-jpg-0001.jpg"/></a></figure><p id="f661cb84-c475-4599-b512-e51c22d8a5df" class="">Please refer this pdf also 👇.</p><p id="e3a17dea-fb7d-47c6-b271-8b221f0dfb0b" class="">Only learn formula and structure and explanation 2-3 lines are enough. okay</p><figure id="0a9cf98c-ac5a-4acd-9c80-4f1ad8ede7eb"><div class="source"><a href="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/Formulas.pdf">Formulas.pdf</a></div></figure><p id="7856d793-df98-4f07-aaf8-7c6182b17813" class="">
+</p><h2 id="19d98373-db27-42a4-b85d-4efa3678ade6" class="">HOW YOU SHOULD WRITE THE PAPER IN INTERNAL (FORMAT)</h2><ol type="1" id="8410a302-e0e6-47f2-9dae-3ed05c9c36e2" class="numbered-list" start="1"><li>HEADING</li></ol><ol type="1" id="3018d085-f0a1-4a5b-8a89-a4f187bdf194" class="numbered-list" start="2"><li>AIM</li></ol><ol type="1" id="2d81bfa1-e704-459d-96f3-d4a0d02b0f23" class="numbered-list" start="3"><li>PROCEDURE</li></ol><ol type="1" id="bba626ed-b811-4cc8-be7d-c7f3eefb6421" class="numbered-list" start="4"><li>IMAGE (IF REQUIRED)</li></ol><p id="3d0e4820-eea8-41ba-86f4-46616061d816" class="">
+</p><p id="3e972587-5a42-478d-ba00-6449df6277c9" class="">EXMAPLE:</p><div id="908470ae-7be6-4870-bde2-e9b32e553db9" class="column-list"><div id="f59793f1-0d08-4fa3-87b1-839c7dc5befb" style="width:50%" class="column"><figure id="d734eb91-8844-4f25-ab78-09523e560703" class="image"><a href="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/WhatsApp_Image_2024-06-07_at_20.06.09_3c85a21a.jpg"><img style="width:672px" src="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/WhatsApp_Image_2024-06-07_at_20.06.09_3c85a21a.jpg"/></a></figure></div><div id="6557132c-a815-44de-84ab-d9c54d730f14" style="width:50%" class="column"><figure id="f62b3add-eb78-4655-9564-3d63eb85a7d4" class="image"><a href="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/WhatsApp_Image_2024-06-07_at_20.06.09_01a02c96.jpg"><img style="width:867px" src="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/WhatsApp_Image_2024-06-07_at_20.06.09_01a02c96.jpg"/></a></figure></div></div><div id="ded1ef03-9ca4-4d58-9de5-24b9ae78bffa" class="column-list"><div id="d5c8208c-4650-417b-9e92-5e54564b15d0" style="width:50%" class="column"><figure id="08a0d690-04d5-480e-855a-b2ff6b38fdb8" class="image"><a href="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/WhatsApp_Image_2024-06-07_at_20.06.09_7b98806c.jpg"><img style="width:708px" src="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/WhatsApp_Image_2024-06-07_at_20.06.09_7b98806c.jpg"/></a></figure></div><div id="0fb591f9-615f-499e-89e6-611b86f8d157" style="width:50%" class="column"><figure id="02f5b034-b303-4ae9-9c50-83c09cf092c2" class="image"><a href="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/WhatsApp_Image_2024-06-07_at_20.06.09_4253c839.jpg"><img style="width:708px" src="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/WhatsApp_Image_2024-06-07_at_20.06.09_4253c839.jpg"/></a></figure></div></div><p id="cd97095a-a46f-46b0-b559-57ac4a1fdc1c" class="">
+</p><h1 id="572dcb19-34f6-4d88-98db-4b10d2dbbf27" class="">⭐⭐Very Important question ⭐⭐</h1><h3 id="9654d3b7-84f2-4916-b483-f692c74fb5ac" class=""><span style="border-bottom:0.05em solid">MAIL MERGE.</span></h3><p id="04bb64ff-1300-47b5-83b0-d28c215565aa" class="">
+</p><p id="49de7d3a-7a9c-4869-9fb2-32045fa0a0e9" class=""><strong>MAIL MERGE</strong></p><p id="65886a09-d1b1-4282-a9f8-67ca4eef9a42" class=""><strong>Aim: </strong>Create a mail merge to send a letter 2 3 members.</p><p id="fe7584b8-e674-405f-8b30-c904d59d188c" class=""><strong>Procedure:</strong></p><p id="d734161d-da11-473e-9eb2-0a7e2d627dcb" class=""><strong>Step 1: </strong>Open MS-Word by click on START button; go to All Programs, then select Microsoft Office Word</p><p id="2f439208-c7eb-490f-9bfe-f428a9754672" class="">2007.</p><p id="23adf36a-3d88-402a-a01e-3c76c4fbc71e" class=""><strong>Step 2: </strong>To open a new document, Click on Office Button then select</p><p id="7397f682-2ad4-4a58-8ae8-af26a5247569" class="">New - &gt; Blank Document then</p><p id="9e6b6954-664d-4496-87fa-ea89c6b6cc55" class="">click on create option.</p><p id="9428a6cb-9ba2-4fa3-81ec-fb5ab1f2b92b" class=""><strong>Step 3: </strong>Select the text area, then write a letter with remaining the “To address” field empty.</p><p id="bbfe2670-06c2-4ea5-9a6f-957ef00f8a3f" class=""><strong>Step 4: </strong>Select “Mailings” from “Tools‟ menu. Then click on “Start Mail Merge” option then select “step by</p><p id="c77e9b44-862d-45a5-b515-6ddd17a864e3" class="">step Mail merge wizard…” Then Mail merge dialog box appears on the right side of the screen.</p><p id="a2d845d0-c8e6-4b67-ab4f-77923ebc5c6b" class=""><strong>Step 5:</strong></p><p id="cb7470b0-56b4-4ef3-92a7-1f4c0cce6308" class="">i)</p><p id="10f107a2-fede-4abb-8a06-00b4579d69e7" class="">Select the Letter Type as “Letters” Radio button from “Select document type list. Click on”</p><p id="da669b37-a3ad-43b8-b1c9-b23974500676" class="">Next: Starting document”.</p><p id="08e4f9ae-fda0-4d29-8719-ea8dc67e115b" class="">ii)</p><p id="7ca5e35a-8f39-4722-8652-6bf1a399bf50" class="">Select the “Use the current document “radio button from the “select starting document “list.</p><p id="b7bcd14b-f406-4627-9778-ea4e90d18a47" class="">Then click on “Next : Select Recipients”</p><p id="804156ae-aef9-44f8-9f20-b58b1ca5e8f4" class="">iii) Select “Type a new list” radio button from “select recipients “list .Then click on “create”. Then a</p><p id="93c45830-3023-47a1-89db-007dae7ee4c8" class="">new dialogue box “New address list” appears. Then enter address information for 10 entries.</p><p id="725d9dca-483d-49e8-aab8-f8d3d3ba00c0" class="">Then click on “OK”. Then click on “save “. Then 10 entries list will appear, select needed ones.</p><p id="ddb44a7b-b83a-41e4-8983-0cde228aa59a" class="">Then press on “OK”. Then click “Next: Write your letter”.</p><p id="d5e75e7c-0964-4b34-b992-74eeeb73ccd4" class="">iv) Select “More items”, then the list will appear. Then select need information and click on “Insert”</p><ul id="d74c032e-117a-4dac-bc2e-6000ddeea17c" class="bulleted-list"><li style="list-style-type:disc">&gt; ”Close” button as many as you want. Then click on “Next: Preview your letters”.</li></ul><p id="eb3b1858-370f-49dc-b2f2-76c49c111762" class="">v)</p><p id="4fc5addd-d3d9-4ba5-a229-e6a1242155b1" class="">We can preview of 10 letters by clicking on “Recipients” then click on “Next: Complete the</p><p id="35b0f049-4175-4da3-adef-6b9ccc1665d1" class="">merge”.</p><p id="f271b29a-0cc7-4e35-a5c4-c84393a08bfa" class="">vi) Select “Edit individual letters…” then select “All” Radio button then click “OK”, to edit any of</p><p id="2a842308-3e26-4bde-9ec9-215da48b85e3" class="">the address if needed.</p><p id="33f5a2d6-32ef-4105-a5f4-9578b4b1a4c5" class=""><strong>Step 6: </strong>At last we have to save the file as “Mail Merge” by clicking on: “Save” button from “Office” button.</p><p id="cf1f6b6c-dc79-4b14-8d2a-aa0733b009a3" class="">
+</p><p id="9de8e080-e710-4ee9-bf41-87ce82359b8f" class=""><strong>if asked write this as output:</strong></p><figure id="d371c5e8-d924-4f52-86db-08aceee82271" class="image"><a href="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/Untitled%201.png"><img style="width:956px" src="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/Untitled%201.png"/></a></figure><p id="1bcb0cec-7efa-4659-a4aa-765580250135" class="">
+</p><p id="18427739-e3a0-402b-ba7e-ddff65079d93" class=""><strong>NOTE: IF YOU DON’T UNDERSTAND MAIL MERGE AND NEED DETAIL EXPLANATION WITH PHOTOS PLEASE CHECK OUT THIS LINK</strong></p><p id="80e3cda5-a06f-4857-a52b-dc59c8174f5f" class=""><a href="https://www.geeksforgeeks.org/how-to-use-mail-merge-in-ms-word/">https://www.geeksforgeeks.org/how-to-use-mail-merge-in-ms-word/</a></p><p id="b9d08f5e-06ac-4987-b801-9fa45027f59c" class="">
+</p><p id="0095691a-bf13-467c-b7e6-940a35ec3557" class=""><strong>STILL STUCKED AT MAIL MERGE: FOLLOW THIS</strong></p><div id="d4a39246-d73b-45e4-bbf0-ff910b9ddae7" class="column-list"><div id="92f04855-5ee0-4106-82b6-916e992c6f54" style="width:50%" class="column"><figure id="874f7de2-7ce6-4bc5-a69d-215c471d7c11" class="image"><a href="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/WhatsApp_Image_2024-06-07_at_20.06.09_16808d25.jpg"><img style="width:708px" src="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/WhatsApp_Image_2024-06-07_at_20.06.09_16808d25.jpg"/></a></figure></div><div id="520c6d42-0192-4810-bc22-f750747dd01d" style="width:50%" class="column"><figure id="99f2b821-bdfd-4280-ba86-1219fef00c89" class="image"><a href="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/WhatsApp_Image_2024-06-07_at_20.06.09_37eaaaee.jpg"><img style="width:708px" src="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/WhatsApp_Image_2024-06-07_at_20.06.09_37eaaaee.jpg"/></a></figure></div></div><h3 id="315522b6-0c30-4668-89c6-babd65b23c56" class="">HOW TO CREATE A ID CARD IN MS WORD: FOLLOW THE LINK BELOW</h3><p id="eccb8920-1e41-4cad-b743-c5e7558f87aa" class=""><a href="https://youtu.be/uTFSw8askkM">https://youtu.be/uTFSw8askkM</a></p><p id="7a31dc86-39b4-4a83-8231-562c10d8ef66" class="">
+</p><h3 id="d97579ea-823e-4bc0-b7b5-4fa4a0d2f5ac" class="">HOW TO CREATE A TIME TABLE IN MS WORD: FOLLOW THE LINK BELOW</h3><p id="1545ae0f-3fb9-4616-8df6-520d234cdba7" class=""><a href="https://youtu.be/_jMvPk16MwM">https://youtu.be/_jMvPk16MwM</a></p><p id="f205f808-1b54-447c-aece-d098a7753cc4" class="">
+</p><p id="e6e99e8f-af0a-47eb-b314-cbd747edd044" class=""><div class="indented"><p id="d7f22837-e503-44e5-80d2-5aa68d24b753" class="">👇👇👇👇 <strong>THE COMPLETE IT WORKSHOP LAB MANUAL</strong>   👇👇👇👇</p><figure id="3bb288de-ce67-45ac-ab7a-ff54433d04d8"><div class="source"><a href="IT%20INTERNAL%20-%20@shv%204eb08122551c4fd7ba7bb7fc9ec3cfa7/IT_Workshop_Lab_Manual.pdf">IT Workshop Lab Manual.pdf</a></div></figure><p id="b0625cad-d8a2-4be9-bf93-7b5bffb3b6ed" class="">
+</p></div></p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
